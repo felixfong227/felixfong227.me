@@ -5,13 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Felix Fong (@felixfong227)</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Krona+One&family=Oswald:wght@700&family=Oxygen:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
+    <style>
+      .hide {
+        display: none;
+      }
+
+      #left_side {
+        position: absolute;
+        top: 50%;
+        transform: rotate(-90deg);
+        left: -8%;
+      }
+
+      #name {
+        font-family: "Oswald", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 64px;
+        line-height: 95px;
+        text-transform: uppercase;
+        letter-spacing: 0.245em;
+        color: #000000;
+      }
+
+      #center {
+        position: relative;
+        left: 16em;
+        top: 5em;
+        width: 50%;
+      }
+
+      #profile_picture {
+        width: 274px;
+        height: 274px;
+        border-radius: 50%;
+      }
+    </style>
+
     <div id="left_side">
       <h1 id="name">Felix Fong</h1>
     </div>
@@ -23,7 +55,7 @@
       />
 
       <div id="text">
-        <div id="info">
+        <div id="info" class="hide">
           <span class="qoute">“</span>
           <span id="title">Back End Solution Engineer</span>
           <span class="qoute">”</span>
@@ -39,7 +71,7 @@
         </div>
       </div>
 
-      <div id="bottom">
+      <div id="bottom" class="hide">
         <a href="https://github.com/felixfong227">
           <img
             width="40"
@@ -66,6 +98,12 @@
 
     <div id="bottom_bg"></div>
 
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Krona+One&family=Oswald:wght@700&family=Oxygen:wght@700&display=swap"
+    />
+    <link rel="stylesheet" href="./style.css" />
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
@@ -86,6 +124,13 @@
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
       firebase.performance();
+    </script>
+
+    <script>
+      const allHideEls = document.querySelectorAll(".hide");
+      allHideEls.forEach(el => {
+        el.classList.remove("hide");
+      });
     </script>
   </body>
 </html>
