@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Felix Fong (@felixfong227)</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&family=Oswald:wght@700&family=Oxygen:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="left_side">
+      <h1 id="name">Felix Fong</h1>
+    </div>
+
+    <div id="center">
+      <img
+        id="profile_picture"
+        src="https://avatars0.githubusercontent.com/u/13918481"
+      />
+
+      <div id="text">
+        <div id="info">
+          <span class="qoute">“</span>
+          <span id="title">Back End Solution Engineer</span>
+          <span class="qoute">”</span>
+          <p id="skills">Specializing in NodeJS and Go</p>
+          <div id="des_group">
+            <p id="des1" class="des">
+              Design and maintaining large-scaled
+            </p>
+            <p id="des2" class="des">
+              production applications for the real world
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="bottom">
+        <a href="https://github.com/felixfong227">
+          <img
+            width="40"
+            height="40"
+            src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg"
+          />
+        </a>
+        <a href="https://linkedin.com/in/felixfong227">
+          <img
+            width="40"
+            height="40"
+            src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"
+          />
+        </a>
+        <a href="https://twitter.com/felixfong227">
+          <img
+            width="40"
+            height="40"
+            src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg"
+          />
+        </a>
+      </div>
+    </div>
+
+    <div id="bottom_bg"></div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-performance.js"></script>
+
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyCN7_0gtI5ZPMb0XwkLv5F8m3mgew13Bw0",
+        authDomain: "felixfong227-me.firebaseapp.com",
+        databaseURL: "https://felixfong227-me.firebaseio.com",
+        projectId: "felixfong227-me",
+        storageBucket: "felixfong227-me.appspot.com",
+        messagingSenderId: "716286676968",
+        appId: "1:716286676968:web:62088bdececa25f17d1e5d",
+        measurementId: "G-M8L6NT52VL"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      firebase.performance();
+    </script>
+  </body>
+</html>
