@@ -1,0 +1,53 @@
+.quote {
+  color: #ccc;
+  font-size: 36px;
+  font-family: "Krona One", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 45px;
+  /* identical to box height */
+  letter-spacing: 0.02em;
+}
+
+/* For desktop  */
+@media screen and (min-width: 769px) {
+}
+
+/* For less then a iPad */
+@media screen and (max-width: 768px) {
+  .text_group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #text_group1 p {
+    font-family: "Oxygen", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.02em;
+  }
+
+  #text_group1 {
+    margin-bottom: 3em;
+  }
+
+  #text_group1 .text2 {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+  }
+
+  #text_group2 p {
+    font-family: "Oxygen", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+}
