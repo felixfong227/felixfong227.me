@@ -5,8 +5,7 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**",
-      "sandbox.config.json",
-      ".github/"
+      "**/.github/**"
     ]
   }
 }
