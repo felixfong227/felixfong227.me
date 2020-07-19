@@ -12,6 +12,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Felix Fong (@felixfong227)</title>
     <link rel="stylesheet" href="./style/critical.css" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Krona+One&family=Oswald:wght@700&family=Oxygen:wght@700&display=swap" as="style" />
+    <link rel="preload" href="./style/style.css" as="style" />
   </head>
   <body>
     <div id="social_buttons_container">
@@ -70,28 +72,16 @@
 
     <div id="bottom_bg"></div>
 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Krona+One&family=Oswald:wght@700&family=Oxygen:wght@700&display=swap" />
+    <link rel="stylesheet" href="./style/style.css" />
+
     <script>
-      (() => {
-        const a = [
-          "https://fonts.googleapis.com/css2?family=Krona+One&family=Oswald:wght@700&family=Oxygen:wght@700&display=swap",
-          "./style/style.css"
-        ];
-
-        a.forEach(b => {
-          const c = document.createElement("link");
-          c.rel = "stylesheet";
-          c.href = b;
-          document.body.append(c);
-        });
-      })();
-
       window.addEventListener("load", () => {
         const a = document.querySelectorAll(".screen-reader-text");
         a.forEach(b => {
           b.classList.remove("screen-reader-text");
         });
       });
-      
     </script>
 
     <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
