@@ -1,0 +1,146 @@
+* {
+  padding: 0em;
+  margin: 0em;
+}
+
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
+
+#bottom_bg {
+  width: 100vw;
+  height: 10em;
+  background: url("../img/Vector 1.svg") no-repeat center;
+  background-size: cover;
+  position: absolute;
+  bottom: 0em;
+  z-index: -1;
+}
+
+/* For desktop  */
+@media screen and (min-width: 769px) {
+  .desktop_content {
+    position: relative;
+    top: 6em;
+    padding-left: 17em;
+  }
+
+  .text_group {
+    font-family: "Oxygen", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.02em;
+  }
+
+  #social_buttons_container a {
+    text-decoration: none;
+  }
+
+  #social_buttons_container {
+    width: 30%;
+    bottom: 13%;
+    left: 2em;
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #info_card #name {
+    position: absolute;
+    top: 43%;
+    transform: rotate(-90deg);
+    left: -1em;
+
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 95px;
+    text-transform: uppercase;
+    letter-spacing: 0.245em;
+    color: #000000;
+  }
+
+  #profile_picture {
+    width: 274px;
+    height: 274px;
+    border-radius: 50%;
+    position: relative;
+  }
+
+  #text_group1 {
+    margin-top: 1em;
+    position: relative;
+    padding-left: 2em;
+  }
+
+  #text_group1 .text2 {
+    position: relative;
+    padding-left: 3em;
+  }
+
+  #text_group2 {
+    position: relative;
+    padding-left: 5em;
+    margin-top: 2em;
+  }
+
+  #text_group2 .text2 {
+    position: relative;
+    padding-left: 2em;
+  }
+}
+
+/* For less then a iPad size */
+@media screen and (max-width: 768px) {
+  #social_buttons_container {
+    display: flex;
+    max-width: 100vw;
+    justify-content: space-evenly;
+    margin: 2em 0em;
+  }
+
+  #social_buttons_container img {
+    width: 29px;
+    height: 29px;
+    padding: 0.5em;
+  }
+
+  #info_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #profile_picture {
+    width: 149px;
+    height: 149px;
+    border-radius: 50%;
+    min-width: 149px;
+    min-height: 149px;
+  }
+
+  #name {
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 53px;
+    letter-spacing: 0.105em;
+    text-transform: uppercase;
+    margin: 1em 0em;
+    color: #000000;
+    transform: rotate(0deg);
+  }
+}
