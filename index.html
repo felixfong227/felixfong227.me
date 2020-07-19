@@ -85,14 +85,35 @@
         });
       })();
 
-      // (() => {
       window.addEventListener("load", () => {
         const a = document.querySelectorAll(".screen-reader-text");
         a.forEach(b => {
           b.classList.remove("screen-reader-text");
         });
       });
-      // })();
+      
     </script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-performance.js"></script>
+
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyCN7_0gtI5ZPMb0XwkLv5F8m3mgew13Bw0",
+        authDomain: "felixfong227-me.firebaseapp.com",
+        databaseURL: "https://felixfong227-me.firebaseio.com",
+        projectId: "felixfong227-me",
+        storageBucket: "felixfong227-me.appspot.com",
+        messagingSenderId: "716286676968",
+        appId: "1:716286676968:web:62088bdececa25f17d1e5d",
+        measurementId: "G-M8L6NT52VL"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      firebase.performance();
+    </script>
+
   </body>
 </html>
