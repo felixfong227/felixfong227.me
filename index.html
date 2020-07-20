@@ -23,6 +23,31 @@
         href="./style/style.css"
         as="style" 
     />
+    <link
+        rel="preload"
+        href="./img/profile_picture.jpg"
+        as="image"
+    />
+    <link
+        rel="preload"
+        href="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg"
+        as="image"
+    />
+    <link
+        rel="preload"
+        href="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"
+        as="image"
+    />
+    <link
+        rel="preload"
+        href="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg"
+        as="image"
+    />
+    <link
+        rel="preload"
+        href="https://5500-d9615d85-c735-4638-a04b-4066651f33b4.ws-us02.gitpod.io/img/Vector%201.svg"
+        as="image"
+    />
 </head>
 
 <body>
@@ -56,7 +81,7 @@
     <div id="info_card">
         <div class="desktop_content">
             <img 
-                src="./img/profile_picture.jpg"
+                src="./img/profile_picture_100.png"
                 alt="Felix Fong's profile picture"
                 id="profile_picture" 
             />
@@ -95,6 +120,11 @@
                 b.classList.remove("screen-reader-text");
             });
         });
+
+        (() => {
+            const a = document.querySelector('#profile_picture');
+            if(a) a.src = './img/profile_picture.jpg';
+        })();
     </script>
 
     <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
