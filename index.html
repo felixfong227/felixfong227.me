@@ -1,87 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="Description"
-      content="Felix Fong (@felixfong227) personal website"
-    />
+    <meta name="Description" content="Felix Fong (@felixfong227) personal website" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Felix Fong (@felixfong227)</title>
-    <link rel="stylesheet" href="./style/critical.css" />
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Krona+One&family=Oswald:wght@700&family=Oxygen:wght@700&display=swap" as="style" />
-    <link rel="preload" href="./style/style.css" as="style" />
-  </head>
-  <body>
+    <link 
+        rel="stylesheet"
+        href="./style/critical.css" 
+    />
+    <link 
+        rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Krona+One&family=Oswald:wght@700&family=Oxygen:wght@700&display=swap"
+        as="style" 
+    />
+    <link 
+        rel="preload"
+        href="./style/style.css"
+        as="style" 
+    />
+</head>
+
+<body>
     <div id="social_buttons_container">
-      <a href="https://github.com/felixfong227">
-        <img
-          width="40"
-          height="40"
-          src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg"
-          alt="Link to my Github page at https://github.com/felixfong227"
-        />
-      </a>
-      <a href="https://linkedin.com/in/felixfong227">
-        <img
-          width="40"
-          height="40"
-          src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"
-          alt="Link to my LinkedIn page at https://linkedin.com/in/felixfong227"
-        />
-      </a>
-      <a href="https://twitter.com/felixfong227">
-        <img
-          width="40"
-          height="40"
-          src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg"
-          alt="Link to my Twitter page at https://twitter.com/felixfong227"
-        />
-      </a>
+        <a href="https://github.com/felixfong227">
+            <img 
+                width="40"
+                height="40"
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg"
+                alt="Link to my Github page at https://github.com/felixfong227" 
+            />
+        </a>
+        <a href="https://linkedin.com/in/felixfong227">
+            <img 
+                width="40"
+                height="40" 
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg"
+                alt="Link to my LinkedIn page at https://linkedin.com/in/felixfong227" 
+            />
+        </a>
+        <a href="https://twitter.com/felixfong227">
+            <img 
+                width="40" 
+                height="40" 
+                src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg"
+                alt="Link to my Twitter page at https://twitter.com/felixfong227"
+            />
+        </a>
     </div>
 
     <div id="info_card">
-      <div class="desktop_content">
-        <img
-          src="./img/profile_picture.jpg"
-          alt="Felix Fong's profile picture"
-          id="profile_picture"
-        />
-      </div>
-      <div id="name">Felix Fong</div>
+        <div class="desktop_content">
+            <img 
+                src="./img/profile_picture.jpg"
+                alt="Felix Fong's profile picture"
+                id="profile_picture" 
+            />
+        </div>
+        <h1 id="name">Felix Fong</h1>
     </div>
 
     <div class="desktop_content">
-      <div id="text_group1" class="screen-reader-text text_group">
-        <p class="text1">
-          <span class="quote">“</span>
-          Back End Solution Engineer
-          <span class="quote">”</span>
-        </p>
-        <p class="text2">Specializing in NodeJS and Go</p>
-      </div>
+        <div id="text_group1" class="screen-reader-text text_group">
+            <p class="text1">
+                <span class="quote">“</span>
+                Back End Solution Engineer
+                <span class="quote">”</span>
+            </p>
+            <p class="text2">Specializing in NodeJS and Go</p>
+        </div>
 
-      <div id="text_group2" class="screen-reader-text text_group">
-        <p>Design and maintaining large-scaled</p>
-        <p class="text2">production applicati ons for the real world</p>
-      </div>
+        <div id="text_group2" class="screen-reader-text text_group">
+            <p>Design and maintaining large-scaled</p>
+            <p class="text2">production applicati ons for the real world</p>
+        </div>
     </div>
 
     <div id="bottom_bg"></div>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Krona+One&family=Oswald:wght@700&family=Oxygen:wght@700&display=swap" />
+    <link 
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Krona+One&family=Oswald:wght@700&family=Oxygen:wght@700&display=swap"
+    />
     <link rel="stylesheet" href="./style/style.css" />
 
     <script>
-      window.addEventListener("load", () => {
-        const a = document.querySelectorAll(".screen-reader-text");
-        a.forEach(b => {
-          b.classList.remove("screen-reader-text");
+        window.addEventListener("load", () => {
+            const a = document.querySelectorAll(".screen-reader-text");
+            a.forEach(b => {
+                b.classList.remove("screen-reader-text");
+            });
         });
-      });
     </script>
 
     <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-app.js"></script>
@@ -89,21 +102,23 @@
     <script src="https://www.gstatic.com/firebasejs/7.16.0/firebase-performance.js"></script>
 
     <script>
-      var firebaseConfig = {
-        apiKey: "AIzaSyCN7_0gtI5ZPMb0XwkLv5F8m3mgew13Bw0",
-        authDomain: "felixfong227-me.firebaseapp.com",
-        databaseURL: "https://felixfong227-me.firebaseio.com",
-        projectId: "felixfong227-me",
-        storageBucket: "felixfong227-me.appspot.com",
-        messagingSenderId: "716286676968",
-        appId: "1:716286676968:web:62088bdececa25f17d1e5d",
-        measurementId: "G-M8L6NT52VL"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
-      firebase.performance();
+        if(window.location.hostname === 'felixfong227.me') {
+            var firebaseConfig = {
+                apiKey: "AIzaSyCN7_0gtI5ZPMb0XwkLv5F8m3mgew13Bw0",
+                authDomain: "felixfong227-me.firebaseapp.com",
+                databaseURL: "https://felixfong227-me.firebaseio.com",
+                projectId: "felixfong227-me",
+                storageBucket: "felixfong227-me.appspot.com",
+                messagingSenderId: "716286676968",
+                appId: "1:716286676968:web:62088bdececa25f17d1e5d",
+                measurementId: "G-M8L6NT52VL"
+            };
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+            firebase.performance();
+        }
     </script>
 
-  </body>
+</body>
+
 </html>
