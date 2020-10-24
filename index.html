@@ -51,7 +51,7 @@
 
 <body>
     <div id="social_buttons_container">
-        <a href="https://github.com/felixfong227">
+        <a href="https://github.com/felixfong227" data-attr="github">
             <img 
                 width="40"
                 height="40"
@@ -59,7 +59,7 @@
                 alt="Link to my Github page at https://github.com/felixfong227" 
             />
         </a>
-        <a href="https://linkedin.com/in/felixfong227">
+        <a href="https://linkedin.com/in/felixfong227" data-attr="linkedin">
             <img 
                 width="40"
                 height="40" 
@@ -67,7 +67,7 @@
                 alt="Link to my LinkedIn page at https://linkedin.com/in/felixfong227" 
             />
         </a>
-        <a href="https://twitter.com/felixfong227">
+        <a href="https://twitter.com/felixfong227" data-attr="twitter">
             <img 
                 width="40" 
                 height="40" 
@@ -145,6 +145,19 @@
             firebase.initializeApp(firebaseConfig);
             firebase.analytics();
             firebase.performance();
+
+            const allSocialButtons = document.querySelectorAll('#social_buttons_container > a')
+            allSocialButtons.forEach(el => {
+                el.addEventListener('click', e => {
+                    const attr = el.dataset.attr;
+                    if (attr) {
+                        analytics.logEvent('social_buttons_click', {
+                            buttonAttr: attr,
+                        });
+                    }
+                });
+            });
+
         }
     </script>
 
