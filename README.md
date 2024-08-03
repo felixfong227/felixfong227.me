@@ -5,3 +5,9 @@ This is my personal website, re-built with [Astro](https://astro.build).
 the original one was build with hand-crafted HTML, CSS and a little bit of JS to optimize the image loading
 
 but now I'm using Astro, so the code should be a lot cleaner
+
+# How to run locally
+
+1. clone the repo
+2. run `npm install`
+3. run `npm run dev`
