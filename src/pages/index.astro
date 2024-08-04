@@ -8,23 +8,32 @@ import Quote from '../components/Quote.astro';
 ---
 
 <Layout title="Felix Fong (@felixfong227)">
-    <main class="flex flex-row bg-cyan-50 w-screen h-screen">
-        <div class="bg-red-100 flex basis-1/6 justify-center items-center">
-            <h1 class="font-oswald font-bold text-6xl uppercase rotate-inverted-90 text-nowrap tracking-main-name" >Felix Fong</h1>
+    <main class="flex h-screen w-screen flex-row bg-cyan-50">
+
+        <div class="flex basis-1/4 items-center justify-center bg-red-100">
+            <h1 class="text-nowrap rotate-inverted-90 font-oswald text-6xl font-bold uppercase tracking-main-name" >Felix Fong</h1>
         </div>
-        <div class="basis-1/2 w-full bg-sky-50 font-oxygen text-2xl">
-            <Image alt="my profile pic" src={localProfilePicture} loading={'eager'} width={274} height={274} class="rounded-full" />
 
-            <Quote />
-            <span> Back End Solution Engineer </span>
-            <p class="pl-12">Specializing in NodeJS and Go</p>
+        <div class="grid grid-cols-5 grid-rows-5 gap-2">
 
-            <div class="mt-8 pl-20">
-                <p>Designing and maintaining large-scale</p>
-                <span class="pl-12">production application for the real world</span>
-                <Quote endQuote={true} />
+            <div class="col-span-4 col-start-2 row-start-2">
+                <div class="w-full bg-sky-50 font-oxygen text-2xl">
+
+                    <Image alt="my profile pic" src={localProfilePicture} loading={'eager'} width={274} height={274} class="mb-6 rounded-full" />
+
+                    <Quote />
+                    <span> Back End Solution Engineer </span>
+                    <p class="pl-12">Specializing in NodeJS and Go</p>
+
+                    <div class="mt-8 pl-20">
+                        <p>Designing and maintaining large-scale</p>
+                        <span class="pl-12">production application for the real world</span>
+                        <Quote endQuote={true} />
+                    </div>
+                </div>
             </div>
 
         </div>
+
     </main>
 </Layout>
