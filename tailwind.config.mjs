@@ -15,6 +15,9 @@ export default {
             },
             rotate: {
                 'inverted-90': '-90deg',
+            },
+            colors: {
+                'grey': '#CCCCCC',
             }
         },
     },
