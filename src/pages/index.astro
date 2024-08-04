@@ -4,12 +4,13 @@ import '@fontsource-variable/oswald';
 import '@fontsource/oxygen';
 import { Image } from 'astro:assets';
 import localProfilePicture from '../../img/profile_picture.jpg';
+import localWaveSVG from '../../img/Vector 1.svg';
 import Quote from '../components/Quote.astro';
 import { Icon } from 'astro-icon/components'
 ---
 
 <Layout title="Felix Fong (@felixfong227)">
-    <main class="flex h-screen w-screen flex-col">
+    <main class="flex h-screen w-screen flex-col justify-between">
 
         <div class="mt-5 flex flex-row items-center justify-center gap-2">
             <Icon name="mdi:github" class="size-11 p-1">
@@ -51,5 +52,14 @@ import { Icon } from 'astro-icon/components'
 
         </div>
 
+        <div>
+            <Image
+                alt="footer wave svg"
+                src={localWaveSVG}
+            />
+        </div>
+
     </main>
+
+
 </Layout>
