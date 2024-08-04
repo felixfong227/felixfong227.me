@@ -1,4 +1,14 @@
 ---
 import '@fontsource/krona-one';
+
+export interface Props {
+    endQuote?: boolean;
+}
+const { endQuote = false } = Astro.props;
 ---
-<span class="text-grey font-krona-one leading-10 tracking-wide">“</span>
+
+{
+    (endQuote === true) ?
+    <span class="text-grey font-krona-one leading-10 tracking-wide">”</span> :
+    <span class="text-grey font-krona-one leading-10 tracking-wide">“</span>
+}

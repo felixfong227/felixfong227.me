@@ -14,11 +14,17 @@ import Quote from '../components/Quote.astro';
         </div>
         <div class="basis-1/2 w-full bg-sky-50 font-oxygen text-2xl">
             <Image alt="my profile pic" src={localProfilePicture} loading={'eager'} width={274} height={274} class="rounded-full" />
-            <p>
-                <Quote />
-                Back End Solution Engineer
-                <p class="pl-12">Specializing in NodeJS and Go</p>
-            </p>
+
+            <Quote />
+            <span> Back End Solution Engineer </span>
+            <p class="pl-12">Specializing in NodeJS and Go</p>
+
+            <div class="mt-8 pl-20">
+                <p>Designing and maintaining large-scale</p>
+                <span class="pl-12">production application for the real world</span>
+                <Quote endQuote={true} />
+            </div>
+
         </div>
     </main>
 </Layout>
