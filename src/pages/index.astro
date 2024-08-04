@@ -1,10 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Content from '../components/Content.astro';
+import '@fontsource-variable/oswald';
 ---
 
-<Layout title="Welcome to Astro.">
-    <main>
-        <Content />
+<Layout title="Felix Fong (@felixfong227)">
+    <main class="flex flex-row bg-cyan-50 w-screen h-screen">
+        <div class="bg-red-100 flex basis-1/6 justify-center items-center">
+            <h1 class="font-oswald font-bold text-6xl uppercase rotate-inverted-90 text-nowrap tracking-main-name" >Felix Fong</h1>
+        </div>
+        <div class="basis-1/2 w-full bg-sky-50">
+            <h1 class="font-oswald font-bold size-16 uppercase rotate-inverted-90" >Felix Fong</h1>
+        </div>
     </main>
 </Layout>
