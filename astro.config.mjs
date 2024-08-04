@@ -14,7 +14,7 @@ export default defineConfig({
           'linkedin',
         ]
       }
-    })
+    }),
   ],
   output: 'static',
 });

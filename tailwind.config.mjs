@@ -18,6 +18,9 @@ export default {
             },
             colors: {
                 'grey': '#CCCCCC',
+            },
+            zIndex: {
+                abyss: '-999',
             }
         },
     },

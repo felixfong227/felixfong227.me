@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import '@fontsource-variable/oswald';
 import '@fontsource/oxygen';
 import { Image } from 'astro:assets';
-import localProfilePicture from '../../img/profile_picture.jpg';
-import localWaveSVG from '../../img/Vector 1.svg';
+import localProfilePicture from '../img/profile_picture.jpg';
+import localWaveSVG from '../img/wave.svg';
 import Quote from '../components/Quote.astro';
 import { Icon } from 'astro-icon/components'
 ---
@@ -22,7 +22,7 @@ import { Icon } from 'astro-icon/components'
             </Icon>
         </div>
 
-        <div class="mt-10 flex flex-col items-center">
+        <div class="flex flex-col items-center">
             <Image
                     alt="my profile pic"
                     src={localProfilePicture}
@@ -35,7 +35,7 @@ import { Icon } from 'astro-icon/components'
         </div>
 
 
-        <div class="mt-7 flex w-full flex-col items-center font-oxygen text-sm">
+        <div class="flex w-full flex-col items-center font-oxygen text-sm">
 
             <div>
                 <Quote />
@@ -52,12 +52,13 @@ import { Icon } from 'astro-icon/components'
 
         </div>
 
-        <div>
-            <Image
-                alt="footer wave svg"
-                src={localWaveSVG}
-            />
-        </div>
+
+        <Image 
+            alt="background wave"
+            src={localWaveSVG}
+            class="w-full h-auto z-abyss"
+        />
+
 
     </main>
 
