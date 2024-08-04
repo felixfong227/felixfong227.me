@@ -5,6 +5,7 @@ import '@fontsource/oxygen';
 import { Image } from 'astro:assets';
 import localProfilePicture from '../../img/profile_picture.jpg';
 import Quote from '../components/Quote.astro';
+import { Icon } from 'astro-icon/components'
 ---
 
 <Layout title="Felix Fong (@felixfong227)">
@@ -33,6 +34,12 @@ import Quote from '../components/Quote.astro';
                 </div>
             </div>
 
+        </div>
+
+        <div>
+            <a href="https://github.com/felixfong227">
+                <Icon name="mdi:github" />
+            </a>
         </div>
 
     </main>
