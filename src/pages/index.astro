@@ -15,9 +15,9 @@ const socialLinks = [
 ---
 
 <Layout title="Felix Fong (@felixfong227)">
-    <main class="flex min-h-screen flex-col">
+    <main class="flex flex-col min-h-screen">
         <div
-            class="mt-8 justify-center gap-4 md:fixed md:bottom-[13%] md:left-8 md:w-1/3 flex"
+            class="md:bottom-[13%] md:left-8 md:fixed flex justify-center gap-4 mt-8 md:w-1/3"
         >
             {
                 socialLinks.map(({ name, url }) => (
@@ -26,59 +26,59 @@ const socialLinks = [
                         data-attr={name}
                         aria-label={`Visit my ${name} profile`}
                     >
-                        <Icon name={`mdi:${name}`} class="h-10 w-10" />
+                        <Icon name={`mdi:${name}`} class="w-10 h-10" />
                     </a>
                 ))
             }
         </div>
 
         <div
-            class="flex flex-col items-center md:items-start md:pl-64 md:pt-24"
+            class="flex flex-col items-center md:items-start md:pt-24 md:pl-64"
         >
             <div class="relative">
                 <Image
                     src={localProfilePicture}
                     alt="Felix Fong"
-                    class="h-36 w-36 rounded-full md:h-64 md:w-64"
+                    class="rounded-full w-36 md:w-64 h-36 md:h-64"
                     width={512}
                     height={512}
                     loading="eager"
                 />
             </div>
             <h1
-                class="mt-4 font-oswald text-4xl font-bold uppercase tracking-wider md:absolute md:top-[43%] md:-left-4 md:mt-0 md:text-6xl md:tracking-widest md:-rotate-90"
+                class="md:top-[43%] md:-left-4 md:absolute mt-4 md:mt-0 font-bold font-oswald text-4xl md:text-6xl uppercase tracking-wider md:tracking-widest md:-rotate-90"
             >
                 Felix Fong
             </h1>
         </div>
 
-        <div class="md:pl-64 md:pt-24">
-            <div class="mb-12 text-center md:mb-8 md:pl-8 md:text-left">
+        <div class="md:pt-24 md:pl-64">
+            <div class="mb-12 md:mb-8 md:pl-8 text-center md:text-left">
                 <p
-                    class="font-oxygen text-xl font-bold tracking-wide md:text-2xl"
+                    class="font-bold font-oxygen text-xl md:text-2xl tracking-wide"
                 >
                     <span
-                        class="font-krona-one text-3xl font-normal leading-relaxed tracking-wide text-gray-400"
+                        class="font-krona-one font-normal text-3xl text-gray-400 leading-relaxed tracking-wide"
                         >"</span
                     >
                     Back End Solution Engineer
                     <span
-                        class="font-krona-one text-3xl font-normal leading-relaxed tracking-wide text-gray-400"
+                        class="font-krona-one font-normal text-3xl text-gray-400 leading-relaxed tracking-wide"
                         >"</span
                     >
                 </p>
-                <p class="font-oxygen text-sm font-bold md:pl-12 md:text-2xl">
+                <p class="md:pl-12 font-bold font-oxygen text-sm md:text-2xl">
                     Specializing in NodeJS and Go
                 </p>
             </div>
 
-            <div class="text-center md:pl-20 md:text-left">
+            <div class="md:pl-20 text-center md:text-left">
                 <p
-                    class="font-oxygen text-sm font-bold tracking-wide md:text-2xl"
+                    class="font-bold font-oxygen text-sm md:text-2xl tracking-wide"
                 >
                     Designing and maintaining large-scale
                 </p>
-                <p class="font-oxygen text-sm font-bold md:pl-8 md:text-2xl">
+                <p class="md:pl-8 font-bold font-oxygen text-sm md:text-2xl">
                     production application for the real world
                 </p>
             </div>
@@ -88,7 +88,7 @@ const socialLinks = [
             <Image
                 src={localWaveSVG}
                 alt="Decorative wave"
-                class="h-40 w-full object-cover"
+                class="w-full h-40 object-cover"
                 loading="eager"
             />
         </div>
