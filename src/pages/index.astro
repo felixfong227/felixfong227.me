@@ -2,65 +2,76 @@
 import Layout from '../layouts/Layout.astro';
 import '@fontsource-variable/oswald';
 import '@fontsource/oxygen';
+import '@fontsource/krona-one';
 import { Image } from 'astro:assets';
 import localProfilePicture from '../img/profile_picture.jpg';
 import localWaveSVG from '../img/wave.svg';
-import Quote from '../components/Quote.astro';
 import { Icon } from 'astro-icon/components'
+
+const socialLinks = [
+    { name: 'github', url: 'https://github.com/felixfong227' },
+    { name: 'linkedin', url: 'https://linkedin.com/in/felixfong227' }
+];
 ---
 
 <Layout title="Felix Fong (@felixfong227)">
-    <main class="flex h-screen w-screen flex-col justify-between">
-
-        <div class="mt-5 flex flex-row items-center justify-center gap-2">
-            <Icon name="mdi:github" class="size-11 p-1">
-                <a href="https://github.com/felixfong227" />
-            </Icon>
-
-            <Icon name="mdi:linkedin" class="size-11 p-1">
-                <a href="https://linkedin.com/in/felixfong227" />
-            </Icon>
+    <main class="flex min-h-screen flex-col">
+        <div class="mt-8 flex justify-center gap-4 md:fixed md:bottom-[13%] md:left-8 md:w-1/3">
+            {socialLinks.map(({ name, url }) => (
+                <a href={url} data-attr={name} aria-label={`Visit my ${name} profile`}>
+                    <Icon 
+                        name={`mdi:${name}`} 
+                        class="h-10 w-10"
+                    />
+                </a>
+            ))}
         </div>
 
-        <div class="flex flex-col items-center">
-            <Image
-                    alt="my profile pic"
+        <div class="flex flex-col items-center md:items-start md:pl-64 md:pt-24">
+            <div class="relative">
+                <Image
                     src={localProfilePicture}
-                    loading={'eager'}
-                    width={274}
-                    height={274}
-                    class="mb-6 h-36 w-36 rounded-full"
+                    alt="Felix Fong"
+                    class="h-36 w-36 rounded-full md:h-64 md:w-64"
+                    width={512}
+                    height={512}
+                    loading="eager"
+                />
+            </div>
+            <h1 class="mt-4 font-oswald text-4xl font-bold uppercase tracking-wider md:absolute md:top-[43%] md:-left-4 md:mt-0 md:text-6xl md:tracking-widest md:-rotate-90">
+                Felix Fong
+            </h1>
+        </div>
+
+        <div class="md:pl-64 md:pt-24">
+            <div class="mb-12 text-center md:mb-8 md:pl-8 md:text-left">
+                <p class="font-oxygen text-xl font-bold tracking-wide md:text-2xl">
+                    <span class="font-krona-one text-3xl font-normal leading-relaxed tracking-wide text-gray-400">"</span>
+                    Back End Solution Engineer
+                    <span class="font-krona-one text-3xl font-normal leading-relaxed tracking-wide text-gray-400">"</span>
+                </p>
+                <p class="font-oxygen text-sm font-bold md:pl-12 md:text-2xl">
+                    Specializing in NodeJS and Go
+                </p>
+            </div>
+
+            <div class="text-center md:pl-20 md:text-left">
+                <p class="font-oxygen text-sm font-bold tracking-wide md:text-2xl">
+                    Designing and maintaining large-scale
+                </p>
+                <p class="font-oxygen text-sm font-bold md:pl-8 md:text-2xl">
+                    production application for the real world
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-auto">
+            <Image 
+                src={localWaveSVG}
+                alt="Decorative wave"
+                class="h-40 w-full object-cover"
+                loading="eager"
             />
-            <h1 class="font-oswald text-4xl font-bold uppercase" >Felix Fong</h1>
         </div>
-
-
-        <div class="flex w-full flex-col items-center font-oxygen text-sm">
-
-            <div>
-                <Quote />
-                <span class="text-xl font-bold"> Back End Solution Engineer </span>
-                <Quote endQuote={true} />
-
-                <p class="text-center text-sm font-bold">Specializing in NodeJS and Go</p>
-            </div>
-
-            <div class="mt-7 text-sm font-bold">
-                <p>Designing and maintaining large-scale</p>
-                <span class="">production application for the real world</span>
-            </div>
-
-        </div>
-
-
-        <Image 
-            alt="background wave"
-            src={localWaveSVG}
-            class="w-full h-auto z-abyss"
-        />
-
-
     </main>
-
-
 </Layout>
