@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import "@fontsource-variable/oswald";
 import "@fontsource/oxygen";
 import "@fontsource/krona-one";
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import localProfilePicture from "../img/profile_picture.jpg";
 import localWaveSVG from "../img/wave.svg";
@@ -36,13 +36,14 @@ const socialLinks = [
             class="flex flex-col items-center md:items-start md:pt-24 md:pl-64"
         >
             <div class="relative">
-                <Image
+                <Picture
                     src={localProfilePicture}
                     alt="Felix Fong"
                     class="rounded-full w-36 md:w-64 h-36 md:h-64"
                     width={512}
                     height={512}
                     loading="eager"
+                    formats={["avif", "webp", "png"]}
                 />
             </div>
             <h1
@@ -85,11 +86,12 @@ const socialLinks = [
         </div>
 
         <div class="mt-auto">
-            <Image
+            <Picture
                 src={localWaveSVG}
                 alt="Decorative wave"
                 class="w-full h-40 object-cover"
                 loading="eager"
+                formats={["svg"]}
             />
         </div>
     </main>
