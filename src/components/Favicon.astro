@@ -1,0 +1,21 @@
+---
+import { getImage } from 'astro:assets';
+import profilePicture from '../img/profile_picture.jpg';
+
+const favicon32 = await getImage({
+    src: profilePicture,
+    width: 32,
+    height: 32,
+    format: 'png',
+});
+
+const favicon16 = await getImage({
+    src: profilePicture,
+    width: 16,
+    height: 16,
+    format: 'png',
+});
+---
+
+<link rel="icon" type="image/png" href={favicon32.src} sizes="32x32" />
+<link rel="icon" type="image/png" href={favicon16.src} sizes="16x16" /> 
