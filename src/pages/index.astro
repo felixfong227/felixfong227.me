@@ -7,6 +7,8 @@ import { Picture } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import localProfilePicture from "../img/profile_picture.jpg";
 import localWaveSVG from "../img/wave.svg";
+import Quote from "../components/Quote.astro";
+import Posthog from '../components/Posthog.astro';
 
 const socialLinks = [
     { name: "github", url: "https://github.com/felixfong227" },
@@ -58,15 +60,9 @@ const socialLinks = [
                 <p
                     class="font-bold font-oxygen text-xl md:text-2xl tracking-wide"
                 >
-                    <span
-                        class="font-krona-one font-normal text-3xl text-gray-400 leading-relaxed tracking-wide"
-                        >"</span
-                    >
+                    <Quote />
                     Back End Solution Engineer
-                    <span
-                        class="font-krona-one font-normal text-3xl text-gray-400 leading-relaxed tracking-wide"
-                        >"</span
-                    >
+                    <Quote endQuote={true} />
                 </p>
                 <p class="md:pl-12 font-bold font-oxygen text-sm md:text-2xl">
                     Specializing in NodeJS and Go
@@ -94,5 +90,6 @@ const socialLinks = [
                 formats={["svg"]}
             />
         </div>
+        <Posthog />
     </main>
 </Layout>
