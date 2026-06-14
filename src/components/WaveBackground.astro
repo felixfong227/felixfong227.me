@@ -1,0 +1,19 @@
+{/* rail heights track the wave's edges as a fraction of its 10em height: left=0.3125, right=0.7523 */}
+<div
+  class="absolute left-0 bottom-0 w-full flex items-end z-[-1] pointer-events-none"
+  aria-hidden="true"
+>
+  <div class="rail-left flex-1 bg-ink h-[3.125em]"></div>
+  <svg
+    class="block w-screen h-[10em] grow-0 shrink-0 basis-[100vw]"
+    viewBox="0 0 1440 216"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M699 107.5C282.6 70.3 -14.5 142 -111 182.5L-74.5 298L1623 396.5V1C1488.5 52 1115.4 144.7 699 107.5Z"
+      fill="#161616"
+    />
+  </svg>
+  <div class="rail-right flex-1 bg-ink h-[7.523em]"></div>
+</div>
