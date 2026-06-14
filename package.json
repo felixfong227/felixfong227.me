@@ -1,28 +1,25 @@
 {
-  "name": "static",
-  "version": "1.0.0",
-  "description": "This is a static template with no bundling",
-  "main": "index.html",
+  "name": "felixfong227.me",
+  "type": "module",
+  "version": "2.0.0",
+  "private": true,
   "scripts": {
-    "start": "serve",
-    "build": "echo This is a static template, there is no bundler or bundling involved!"
+    "dev": "portless astro dev",
+    "dev:plain": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test": "astro build && playwright test",
+    "test:install": "playwright install --with-deps chromium"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/codesandbox-app/static-template.git"
+  "dependencies": {
+    "@tailwindcss/vite": "^4",
+    "astro": "^5",
+    "sharp": "^0.33",
+    "tailwindcss": "^4"
   },
-  "keywords": [
-    "static",
-    "template",
-    "codesandbox"
-  ],
-  "author": "Ives van Hoorne",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/codesandbox-app/static-template/issues"
-  },
-  "homepage": "https://github.com/codesandbox-app/static-template#readme",
   "devDependencies": {
-    "serve": "^11.2.0"
+    "@playwright/test": "^1.48",
+    "typescript": "^5"
   }
 }

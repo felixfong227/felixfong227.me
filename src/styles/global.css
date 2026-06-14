@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #161616;
+  --color-quote: #cccccc;
+
+  --font-display: "Oswald", sans-serif;
+  --font-body: "Oxygen", sans-serif;
+  --font-quote: "Krona One", sans-serif;
+
+  --tracking-base: 0.02em;
+  --tracking-name: 0.245em;
+  --tracking-name-sm: 0.105em;
+
+  --breakpoint-desktop: 769px;
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+}
