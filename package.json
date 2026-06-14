@@ -11,7 +11,8 @@
     "astro": "astro",
     "test": "astro build && playwright test",
     "test:install": "playwright install --with-deps chromium",
-    "audit": "astro build && (astro preview --port 4321 & PREVIEW_PID=$!; sleep 3 && lighthouse http://localhost:4321/ --preset=desktop --quiet --chrome-flags='--headless=new' --output=html --output-path=./lighthouse-desktop.html && lighthouse http://localhost:4321/ --quiet --chrome-flags='--headless=new' --output=html --output-path=./lighthouse-mobile.html; kill $PREVIEW_PID)"
+    "audit": "astro build && start-server-and-test 'astro preview --port 4321' http://localhost:4321 audit:lh",
+    "audit:lh": "lighthouse http://localhost:4321/ --preset=desktop --quiet --chrome-flags='--headless=new' --output=html --output-path=./lighthouse-desktop.html && lighthouse http://localhost:4321/ --quiet --chrome-flags='--headless=new' --output=html --output-path=./lighthouse-mobile.html"
   },
   "dependencies": {
     "@fontsource/krona-one": "^5.2.8",
@@ -25,6 +26,7 @@
   "devDependencies": {
     "@playwright/test": "^1.48",
     "lighthouse": "^13.4.0",
+    "start-server-and-test": "^3.0.11",
     "typescript": "^5"
   }
 }
