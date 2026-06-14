@@ -4,15 +4,19 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "dev": "portless astro dev",
+    "dev": "portless felixfong227 astro dev",
     "dev:plain": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "test": "astro build && playwright test",
-    "test:install": "playwright install --with-deps chromium"
+    "test:install": "playwright install --with-deps chromium",
+    "audit": "astro build && astro preview --port 4321 & sleep 3 && lighthouse http://localhost:4321/ --preset=desktop --quiet --chrome-flags='--headless=new' --output=html --output-path=./lighthouse-desktop.html && lighthouse http://localhost:4321/ --quiet --chrome-flags='--headless=new' --output=html --output-path=./lighthouse-mobile.html; kill %1"
   },
   "dependencies": {
+    "@fontsource/krona-one": "^5.2.8",
+    "@fontsource/oswald": "^5.2.8",
+    "@fontsource/oxygen": "^5.2.8",
     "@tailwindcss/vite": "^4",
     "astro": "^5",
     "sharp": "^0.33",
@@ -20,6 +24,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.48",
+    "lighthouse": "^13.4.0",
     "typescript": "^5"
   }
 }
