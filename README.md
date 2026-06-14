@@ -1,6 +1,6 @@
 # felixfong227.me
 
-My personal website. Built with Astro + Tailwind, runs on Bun.
+My personal website
 
 ## Setup
 
