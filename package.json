@@ -1,28 +1,32 @@
 {
-  "name": "static",
-  "version": "1.0.0",
-  "description": "This is a static template with no bundling",
-  "main": "index.html",
+  "name": "felixfong227.me",
+  "type": "module",
+  "version": "2.0.0",
+  "private": true,
   "scripts": {
-    "start": "serve",
-    "build": "echo This is a static template, there is no bundler or bundling involved!"
+    "dev": "portless felixfong227 astro dev",
+    "dev:plain": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "test": "astro build && playwright test",
+    "test:install": "playwright install --with-deps chromium",
+    "audit": "astro build && start-server-and-test 'astro preview --port 4321' http://localhost:4321 audit:lh",
+    "audit:lh": "lighthouse http://localhost:4321/ --preset=desktop --quiet --chrome-flags='--headless=new' --output=html --output-path=./lighthouse-desktop.html && lighthouse http://localhost:4321/ --quiet --chrome-flags='--headless=new' --output=html --output-path=./lighthouse-mobile.html"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/codesandbox-app/static-template.git"
+  "dependencies": {
+    "@fontsource/krona-one": "^5.2.8",
+    "@fontsource/oswald": "^5.2.8",
+    "@fontsource/oxygen": "^5.2.8",
+    "@tailwindcss/vite": "^4",
+    "astro": "^5",
+    "sharp": "^0.33",
+    "tailwindcss": "^4"
   },
-  "keywords": [
-    "static",
-    "template",
-    "codesandbox"
-  ],
-  "author": "Ives van Hoorne",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/codesandbox-app/static-template/issues"
-  },
-  "homepage": "https://github.com/codesandbox-app/static-template#readme",
   "devDependencies": {
-    "serve": "^11.2.0"
+    "@playwright/test": "^1.48",
+    "lighthouse": "^13.4.0",
+    "start-server-and-test": "^3.0.11",
+    "typescript": "^5"
   }
 }

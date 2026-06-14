@@ -1,0 +1,23 @@
+---
+import QuoteMark from './QuoteMark.astro';
+
+const groupFont =
+  'desktop:font-body desktop:font-bold desktop:text-[24px] desktop:leading-7.5 desktop:tracking-base';
+const groupLayout =
+  'max-desktop:flex max-desktop:flex-col max-desktop:justify-center max-desktop:items-center';
+const smallText =
+  'max-desktop:font-body max-desktop:font-bold max-desktop:text-[14px] max-desktop:leading-4.5 max-desktop:tracking-base max-desktop:text-center';
+---
+<div class="desktop:relative desktop:top-[6em] desktop:pl-[17em]">
+  <div class={`${groupFont} ${groupLayout} desktop:mt-[1em] desktop:relative desktop:pl-[2em] max-desktop:mb-[3em]`}>
+    <p class="max-desktop:font-body max-desktop:font-bold max-desktop:text-[20px] max-desktop:leading-6.25 max-desktop:tracking-base">
+      <QuoteMark>Back End Solution Engineer</QuoteMark>
+    </p>
+    <p class={`desktop:relative desktop:pl-[3em] ${smallText}`}>Specializing in NodeJS and Go</p>
+  </div>
+
+  <div class={`${groupFont} ${groupLayout} desktop:relative desktop:pl-[5em] desktop:mt-[2em]`}>
+    <p class={smallText}>Designing and maintaining large-scale</p>
+    <p class={`desktop:relative desktop:pl-[2em] ${smallText}`}>production application for the real world</p>
+  </div>
+</div>

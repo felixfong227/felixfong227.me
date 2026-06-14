@@ -1,0 +1,24 @@
+---
+import { Picture } from 'astro:assets';
+import profile from '../assets/profile_picture.jpg';
+---
+<div class="max-desktop:flex max-desktop:flex-col max-desktop:items-center">
+  <div class="desktop:relative desktop:top-[6em] desktop:pl-[17em]">
+    <Picture
+      src={profile}
+      alt="Felix Fong's profile picture"
+      class="rounded-full desktop:w-68.5 desktop:h-68.5 desktop:relative max-desktop:w-37.25 max-desktop:h-37.25 max-desktop:min-w-37.25 max-desktop:min-h-37.25"
+      widths={[149, 274, 298, 548]}
+      sizes="(max-width: 768px) 149px, 274px"
+      formats={['webp']}
+      fallbackFormat="jpg"
+      loading="eager"
+      fetchpriority="high"
+    />
+  </div>
+  <h1
+    class="font-display font-bold uppercase text-black desktop:absolute desktop:top-[43%] desktop:left-[-1em] desktop:-rotate-90 desktop:text-[64px] desktop:leading-23.75 desktop:tracking-name max-desktop:text-[36px] max-desktop:leading-13.25 max-desktop:tracking-name-sm max-desktop:my-[1em]"
+  >
+    Felix Fong
+  </h1>
+</div>
