@@ -1,5 +1,6 @@
 ---
-const quote = 'text-quote font-quote text-[36px] leading-11.25 tracking-base';
+import QuoteMark from './QuoteMark.astro';
+
 const groupFont =
   'desktop:font-body desktop:font-bold desktop:text-[24px] desktop:leading-7.5 desktop:tracking-base';
 const groupLayout =
@@ -10,9 +11,7 @@ const smallText =
 <div class="desktop:relative desktop:top-[6em] desktop:pl-[17em]">
   <div class={`${groupFont} ${groupLayout} desktop:mt-[1em] desktop:relative desktop:pl-[2em] max-desktop:mb-[3em]`}>
     <p class="max-desktop:font-body max-desktop:font-bold max-desktop:text-[20px] max-desktop:leading-6.25 max-desktop:tracking-base">
-      <span class={quote}>“</span>
-      Back End Solution Engineer
-      <span class={quote}>”</span>
+      <QuoteMark>Back End Solution Engineer</QuoteMark>
     </p>
     <p class={`desktop:relative desktop:pl-[3em] ${smallText}`}>Specializing in NodeJS and Go</p>
   </div>
